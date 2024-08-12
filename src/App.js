@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import Heading from './Component/header.js';
+import Main from './Component/body.js';
+// import Table from './Component/table.js';
+import Footer from './Component/footer.js';
 import './App.css';
+// import UserList from './Component/wise_api.js';
+import Rate from './Component/main.js';
+// import Rate from './Component/mobile_view.js'
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+     
+     < Heading />
+     < Main />
+     {/* < Rate /> */}
+     < Rate />
+     < Footer /> 
+     
+  
+    
+   </div>
   );
 }
 

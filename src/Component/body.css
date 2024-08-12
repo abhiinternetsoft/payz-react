@@ -1,0 +1,40 @@
+.headings-title {
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 30px;
+}
+
+.headings-title button {
+    padding: 12px 30px; 
+    background-image: linear-gradient(to bottom, #FE187B , #FFC025);
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+}
+
+.headings-title h1 {
+    font-family: 'Syne';
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.headings-title p {
+    color: #777777;
+    font-size: 18px;
+}
+
+.headings-title button {
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.arrow-head {
+    color: #ffffff;
+}
+
+@media (max-width: 567px) {
+    .headings-title h1 {
+        font-size: 36px;
+    }
+}

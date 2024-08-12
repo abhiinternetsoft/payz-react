@@ -1,0 +1,28 @@
+.table-cons {
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.table>:not(caption)>*>* {
+    padding: 20px 60px;
+}
+
+thead tr th{
+    background-color: black;
+    color: #ffffff;
+}
+
+.table-head th {
+    background-color: black;
+    color: #ffffff;
+    padding: 30px 60px;
+}
+
+table.table {
+    text-align: left;
+}
+
+tr {
+    vertical-align: middle;
+}

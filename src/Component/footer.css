@@ -1,0 +1,34 @@
+.footer {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    background-color: #1E1E1E;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.col-lg-3 p {
+    margin-top: 20px;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff;
+    padding-top: 24px;
+}
+
+.footer .row {
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 567px) {
+    .footer {
+        width: 100%;
+    }
+}

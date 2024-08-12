@@ -1,0 +1,70 @@
+/* money.css */
+
+@media (max-width: 768px) {
+    .exchange-money {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .money-sec1, .money-sec2, .ex-button {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .currency-button {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+    }
+  
+    .currency-search-bar {
+      width: 100%;
+    }
+  
+    .currency-list {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  
+    .mid-market {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .mid-sec2, .mid-sec3 {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .table-cons {
+      overflow-x: auto;
+      width: 100%;
+    }
+  
+    .table {
+      width: 100%;
+    }
+  
+    .table-head {
+      font-size: 14px;
+    }
+  
+    .Quote-rate, .Quote-fee, .received-amount {
+      font-size: 12px;
+    }
+  
+    .powered-by-wise {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+
+  
