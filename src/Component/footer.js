@@ -1,7 +1,7 @@
 import './footer.css';
 import logo from '../images/footer-logo.png';
 import React from 'react';
-import About from '../Pages/about.js';
+// import About from '../Pages/about.js';
 
 
 function Footer() {
@@ -12,7 +12,7 @@ function Footer() {
                 <img src={logo} alt='footer-logo' width="80%"></img>
             </div>
             <div className='col-lg-3'>
-               <a href={About}><p>About Us</p></a>
+               <a href="http://localhost:3000"><p>About Us</p></a>
                {/* <link to='/About'> <p>About Us</p></link> */}
             </div>     
             <div className='col-lg-3'>

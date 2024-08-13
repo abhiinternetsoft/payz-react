@@ -64,11 +64,13 @@ const ExchangeRate = () => {
   // searchbar for countries 
   
   const handleSourceCurrencyChange = (currency) => {
+    console.log('Selected source currency:', currency);
     setSourceCurrency(currency);
     setIsSourceOpen(false);
   };
 
   const handleTargetCurrencyChange = (currency) => {
+    console.log('Selected source currency:', currency);
     setTargetCurrency(currency);
     setIsTargetOpen(false);
   };
@@ -82,22 +84,24 @@ const ExchangeRate = () => {
     .filter(target => countryDetails[target]?.name.toLowerCase().includes(targetSearch.toLowerCase()));
 
 
-      // Close the dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (sourceDropdownRef.current && !sourceDropdownRef.current.contains(event.target)) {
-        setIsSourceOpen(false);
-      }
-      if (targetDropdownRef.current && !targetDropdownRef.current.contains(event.target)) {
-        setIsTargetOpen(false);
-      }
-    };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+
+      // Close the dropdown when clicking outside
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (sourceDropdownRef.current && !sourceDropdownRef.current.contains(event.target)) {
+  //       setIsSourceOpen(false);
+  //     }
+  //     if (targetDropdownRef.current && !targetDropdownRef.current.contains(event.target)) {
+  //       setIsTargetOpen(false);
+  //     }
+  //   };
+
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside);
+  //   };
+  // }, []);
   
   
   
@@ -169,8 +173,8 @@ const ExchangeRate = () => {
 
 
   return (
-    <div>
-     <div className='desktop-view'>
+  <div>
+    <div className='desktop-view'>
       {/* ============================================ */}
         
       <div className='row exchange-money'>
@@ -256,7 +260,6 @@ const ExchangeRate = () => {
         <div className='col-lg-6 row mid-sec2'>
           <div className='col-lg-6'>
             <p className='you-send'>You Send</p>
-
             
             <input
               type="number"
@@ -354,11 +357,11 @@ const ExchangeRate = () => {
         )}
       </div>
       
-      </div>
+    </div>
       
       {/* =========== mobile view ===================== */}
       
-      <div className='mobile_view'>
+    <div className='mobile_view'>
       <div>
       <div className='exchange-money'>
         <div className='money-sec1'>
@@ -478,9 +481,9 @@ const ExchangeRate = () => {
                 <div className="card-item card-recipient">
                   <strong className='mobile_rate' >Recipient gets:</strong>
                   <strong className='mobile_value'>{item.quotes[0].receivedAmount} {targetCurrency}</strong>
-                 <p> {difference !== 0 && (
+                 <div> {difference !== 0 && (
                     <p className="difference-label">-{difference.toFixed(2)} {targetCurrency}</p>
-                  )}</p>
+                  )}</div>
                 </div>
               </div>
             );
@@ -494,17 +497,9 @@ const ExchangeRate = () => {
         )}
       </div>
     </div>
-      </div>
+    </div>   
       
-      
-      
-    </div>
-    
-    
-    
-  
-    
-    
+  </div>  
   
   );
 };
@@ -513,8 +508,8 @@ ExchangeRate.propTypes = {
   rates: PropTypes.arrayOf(PropTypes.shape({
     source: PropTypes.string.isRequired,
     target: PropTypes.string.isRequired,
-    rate: PropTypes.number.isRequired,
-  })).isRequired,
+    // rate: PropTypes.number.isRequired,
+  })),
 };
 
 export default ExchangeRate;
